@@ -4,7 +4,6 @@ using Newtonsoft.Json;
 using ProofOfConcept.Abstractions;
 using ProofOfConcept.Conts;
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 
@@ -12,8 +11,8 @@ namespace ProofOfConcept
 {
     internal class FormRecognizer : IFormRecognizer, IAnalyzeForm
     {
-
         private readonly IPrinter _printer;
+
         public FormRecognizer(IPrinter printer)
         {
             _printer = printer;
@@ -108,6 +107,7 @@ namespace ProofOfConcept
             {
                 _printer.Print($"{ document.DocumentName}");
             }
+
         }
     }
 }
